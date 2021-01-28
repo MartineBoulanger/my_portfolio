@@ -3,10 +3,22 @@
     justify-self: center;
     width: 60%;
   }
+  .titel-voornaam,
+  .titel-footer,
+  .titel-achternaam,
+  .titel-contact {
+    font-size: 3em;
+  }
   .nav-box {
     visibility: unset;
     margin-right: 0;
     font-size: 0.8em;
+  }
+  .titel-footer,
+  .titel-contact {
+    align-self: start;
+    grid-column: 1 / span 2;
+    grid-row: 3 / span 2;
   }
   .icon {
     width: 75px;
@@ -25,17 +37,10 @@
     width: 100%;
   }
   .titel-voornaam,
-  .titel-footer {
-    font-size: 4em;
-  }
+  .titel-footer,
   .titel-achternaam,
   .titel-contact {
-    font-size: 4.5em;
-  }
-  .titel-footer,
-  .titel-contact {
-    align-self: start;
-    grid-row: 3 / span 2;
+    font-size: 4em;
   }
   .iconen {
     align-self: end;
@@ -43,10 +48,10 @@
   .logo {
     width: 125px;
   }
-  #return-btn{
+  #return-btn {
     visibility: unset;
   }
-  .about p{
+  .about p {
     width: 80%;
   }
 }

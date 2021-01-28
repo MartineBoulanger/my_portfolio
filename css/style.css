@@ -2,10 +2,12 @@
 /*                   Algemene begin                  */
 /* ------------------------------------------------- */
 @import 'normalize.css';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&display=swap');
 body {
   margin: 0;
   font-size: 20px;
-  font-family: 'Roboto', Verdana, Helvetica, sans-serif;
+  font-family: 'Roboto', sans-serif;
   color: #030d19;
   line-height: 1.5;
 }
@@ -15,8 +17,9 @@ img {
 }
 h1,
 h2 {
-  font-family: 'Victor Mono', sans-serif;
+  font-family: 'Hachi Maru Pop', cursive;
   color: #030d19;
+  font-size: 2.5em;
 }
 a:link,
 a:visited {
@@ -58,9 +61,8 @@ section h1 {
   grid-column: 1 / -1;
   grid-row: 1;
   justify-self: center;
-  font-style: italic;
-  letter-spacing: -8px;
-  font-size: 3.5em;
+  letter-spacing: -3px;
+  font-size: 2.5em;
   width: 100%;
   margin: 0;
   text-align: center;
@@ -117,18 +119,17 @@ footer h1 {
   grid-row: 2;
   margin-bottom: 0;
   margin-top: 150px;
-  font-size: 3em;
 }
 .titel-achternaam {
   text-transform: uppercase;
+  font-weight: 900;
   color: #ffffff;
   grid-row: 3;
   grid-column: 1 / -1;
   margin-top: -1.5rem;
-  font-size: 3.5em;
 }
 header p {
-  font-family: 'Victor Mono', sans-serif;
+  font-family: 'Hachi Maru Pop', cursive;
   font-style: italic;
   text-align: left;
   grid-column: 1 / -1;
@@ -174,7 +175,7 @@ header p {
 }
 .navigatie {
   display: table;
-  font-family: 'Victor Mono', sans-serif;
+  font-family: 'Hachi Maru Pop', cursive;
   font-style: italic;
   position: sticky;
   left: 0;
@@ -209,6 +210,7 @@ header p {
   grid-column: 1 / -1;
   grid-row: 1;
   justify-self: center;
+  align-self: center;
   width: 50%;
   padding: 100px 0;
 }
@@ -224,6 +226,7 @@ q{
 /*                    skills begin                   */
 /* ------------------------------------------------- */
 .skills h2 {
+  font-family: 'Roboto', sans-serif;
   font-size: 1.5em;
   margin-bottom: 5px;
 }
@@ -335,27 +338,25 @@ footer {
   justify-self: center;
 }
 .titel-footer {
-  font-size: 3em;
   font-style: italic;
-  color: #15c3ff;
+  color: #fff;
   font-weight: 300;
   padding-bottom: 1em;
 }
 .titel-contact {
   text-transform: uppercase;
-  color: #ffffff;
-  font-size: 3.5em;
+  font-weight: 900;
+  color: #15c3ff;
   padding-top: 1em;
 }
 footer p {
-  font-family: 'Victor Mono', sans-serif;
+  font-family: 'Hachi Maru Pop', cursive;
   font-style: italic;
   grid-column: 1 / -1;
   grid-row: 5;
   justify-self: end;
   padding-right: 25px;
   font-weight: bold;
-  font-size: 1.1em;
   color: #707070;
   margin-top: 150px;
 }

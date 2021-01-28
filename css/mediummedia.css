@@ -3,18 +3,13 @@
     width: 75%;
   }
   .titel-voornaam,
-  .titel-footer {
-    font-size: 5em;
-  }
+  .titel-footer,
   .titel-achternaam,
   .titel-contact {
-    font-size: 5.5em;
+    font-size: 4.5em;
   }
   .logo {
     width: 150px;
-  }
-  .nav-box {
-    font-size: 1em;
   }
   .about p{
     grid-column: 1 / span 2;
