@@ -46,4 +46,7 @@
   #return-btn{
     visibility: unset;
   }
+  .about p{
+    width: 80%;
+  }
 }
