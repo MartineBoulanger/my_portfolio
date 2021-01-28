@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="css/style.css" /> -->
+    <style>
+      /* ------------------------------------------------- */
+      /*                    form begin                     */
+      /* ------------------------------------------------- */
+      .formUp,
+      #formulier {
+        display: none;
+        background-color: rgba(219, 238, 244, 0.8);
+        border: 1px solid #030d19;
+        border-radius: 25px;
+        grid-column: 1 / -1;
+        grid-row: 2 / 4;
+        justify-self: center;
+        height: 400px;
+        box-shadow: 0 0 10px 0 #15c3ff;
+      }
+      #formulier h1 {
+        margin: 1.5rem;
+      }
+      input,
+      textarea {
+        font-family: 'Victor Mono', sans-serif;
+        border: 1px solid #030d19;
+        outline: none;
+        padding: 10px;
+        margin-bottom: 15px;
+        width: 80%;
+        margin-left: 1.5rem;
+        border-radius: 10px;
+        background-color: #f8f8f8;
+      }
+      ::placeholder {
+        font-style: italic;
+        color: #030d19;
+      }
+      #verzendBtn {
+        background-color: #030d19;
+        color: #15c3ff;
+        font-style: italic;
+        width: 50%;
+        float: right;
+        margin-right: 30px;
+        cursor: pointer;
+        transition: all 300ms linear;
+      }
+      #verzendBtn:hover {
+        transform: scale(1.08);
+      }
+      #closeBtn {
+        float: right;
+        border-radius: 10px;
+        padding: 4px 7px;
+        outline: none;
+        border: none;
+        background-color: red;
+        color: #dbeef4;
+        cursor: pointer;
+      }
+      #mailBtn {
+        cursor: pointer;
+      }
+      /* ------------------------------------------------- */
+      /*                    form einde                     */
+      /* ------------------------------------------------- */
+    </style>
+  </head>
+  <body>
+    <form id="formulier">
+      <h1>Stuur een mail</h1>
+      <button id="closeBtn">X</button>
+      <div>
+        <input type="text" name="naam" id="naam" placeholder="Uw naam" />
+      </div>
+      <div>
+        <input
+          type="text"
+          name="email"
+          id="email"
+          placeholder="Uw emailadres"
+        />
+      </div>
+      <div>
+        <textarea
+          rows="4"
+          name="bericht"
+          id="bericht"
+          placeholder="Uw bericht"
+        ></textarea>
+      </div>
+      <div>
+        <input
+          type="submit"
+          name="verzendBtn"
+          id="verzendBtn"
+          value="Verstuur mijn bericht"
+        />
+      </div>
+    </form>
+  </body>
+</html>

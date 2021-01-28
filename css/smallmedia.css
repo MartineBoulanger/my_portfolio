@@ -1,0 +1,49 @@
+@media (min-width: 550px) {
+  .main-content {
+    justify-self: center;
+    width: 60%;
+  }
+  .nav-box {
+    visibility: unset;
+    margin-right: 0;
+    font-size: 0.8em;
+  }
+  .icon {
+    width: 75px;
+  }
+}
+
+@media (min-width: 768px) {
+  .main-content {
+    width: 70%;
+  }
+  .hobbys {
+    display: flex;
+    flex-flow: row wrap;
+  }
+  div.foto-blok:last-child {
+    width: 100%;
+  }
+  .titel-voornaam,
+  .titel-footer {
+    font-size: 4em;
+  }
+  .titel-achternaam,
+  .titel-contact {
+    font-size: 4.5em;
+  }
+  .titel-footer,
+  .titel-contact {
+    align-self: start;
+    grid-row: 3 / span 2;
+  }
+  .iconen {
+    align-self: end;
+  }
+  .logo {
+    width: 125px;
+  }
+  #return-btn{
+    visibility: unset;
+  }
+}

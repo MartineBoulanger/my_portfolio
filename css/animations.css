@@ -1,0 +1,148 @@
+/* Dit is mijn eigen animation css file */
+/* ------------------------------------------------- */
+/*              animation keyframes begin            */
+/* ------------------------------------------------- */
+  @keyframes bounce-up {
+    100% {
+      transform: translateY(0);
+      animation-timing-function: ease-out;
+    }
+    95% {
+      transform: translateY(8px);
+      animation-timing-function: ease-in;
+    }
+    90% {
+      transform: translateY(0);
+      animation-timing-function: ease-out;
+    }
+    81% {
+      transform: translateY(38px);
+      animation-timing-function: ease-in;
+    }
+    72% {
+      transform: translateY(0);
+      animation-timing-function: ease-out;
+    }
+    55% {
+      transform: translateY(65px);
+      animation-timing-function: ease-in;
+    }
+    38% {
+      transform: translateY(0);
+      animation-timing-function: ease-out;
+      opacity: 1;
+    }
+    0% {
+      transform: translateY(600px);
+      animation-timing-function: ease-in;
+      opacity: 0;
+    }
+  } 
+
+@keyframes skill100 {
+    0%{ transform: translateX(0); opacity: 0; }
+    100%{ transform: translateX(100%); opacity: 1; }
+}
+@keyframes skill95 {
+    0%{ transform: translateX(0); opacity: 0; }
+    100%{ transform: translateX(95%); opacity: 1; }
+}
+@keyframes skill90 {
+    0%{ transform: translateX(0); opacity: 0; }
+    100%{ transform: translateX(90%); opacity: 1; }
+}
+@keyframes skill85 {
+    0%{ transform: translateX(0); opacity: 0; }
+    100%{ transform: translateX(85%); opacity: 1; }
+}
+@keyframes skill80 {
+    0%{ transform: translateX(0); opacity: 0; }
+    100%{ transform: translateX(80%); opacity: 1; }
+}
+@keyframes skill75 {
+    0%{ transform: translateX(0); opacity: 0; }
+    100%{ transform: translateX(75%); opacity: 1; }
+}
+@keyframes skill70 {
+    0%{ transform: translateX(0); opacity: 0; }
+    100%{ transform: translateX(70%); opacity: 1; }
+}
+@keyframes skill65 {
+    0%{ transform: translateX(0); opacity: 0; }
+    100%{ transform: translateX(65%); opacity: 1; }
+}
+@keyframes skill60 {
+    0%{ transform: translateX(0); opacity: 0; }
+    100%{ transform: translateX(60%); opacity: 1; }
+}
+@keyframes skill55 {
+    0%{ transform: translateX(0); opacity: 0; }
+    100%{ transform: translateX(55%); opacity: 1; }
+}
+@keyframes skill50 {
+    0%{ transform: translateX(0); opacity: 0; }
+    100%{ transform: translateX(50%); opacity: 1; }
+}
+@keyframes skill45 {
+    0%{ transform: translateX(0); opacity: 0; }
+    100%{ transform: translateX(45%); opacity: 1; }
+}
+@keyframes skill40 {
+    0%{ transform: translateX(0); opacity: 0; }
+    100%{ transform: translateX(40%); opacity: 1; }
+}
+@keyframes skill35 {
+    0%{ transform: translateX(0); opacity: 0; }
+    100%{ transform: translateX(35%); opacity: 1; }
+}
+@keyframes skill30 {
+    0%{ transform: translateX(0); opacity: 0; }
+    100%{ transform: translateX(30%); opacity: 1; }
+}
+@keyframes skill25 {
+    0%{ transform: translateX(0); opacity: 0; }
+    100%{ transform: translateX(25%); opacity: 1; }
+}
+@keyframes skill20 {
+    0%{ transform: translateX(0); opacity: 0; }
+    100%{ transform: translateX(20%); opacity: 1; }
+}
+@keyframes skill15 {
+    0%{ transform: translateX(0); opacity: 0; }
+    100%{ transform: translateX(15%); opacity: 1; }
+}
+@keyframes skill10 {
+    0%{ transform: translateX(0); opacity: 0; }
+    100%{ transform: translateX(10%); opacity: 1; }
+}
+@keyframes skill5 {
+    0%{ transform: translateX(0); opacity: 0; }
+    100%{ transform: translateX(5%); opacity: 1; }
+}
+  /* ------------------------------------------------- */
+  /*              animation keyframes einde            */
+  /* ------------------------------------------------- */
+  /* ------------------------------------------------- */
+  /*               classes animation begin             */
+  /* ------------------------------------------------- */
+.skillgit, .skillhtml, .skillcss{
+    animation: skill100 1s linear forwards;
+}
+.skilljs, .skilljquery{
+    animation: skill85 1s linear forwards;
+}
+.skillps, .skillxd, .skilldrupal{
+    animation: skill75 1s linear forwards;
+}
+.skillphp, .skilllaravel{
+    animation: skill50 1s linear forwards;
+}
+.skillvue, .skillreact{
+    animation: skill10 1s linear forwards;
+}
+.logo{
+    animation: bounce-up 3s forwards;
+}
+  /* ------------------------------------------------- */
+  /*               classes animation begin             */
+  /* ------------------------------------------------- */

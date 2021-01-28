@@ -1,0 +1,86 @@
+@media (min-width: 1024px) {
+  .main-content {
+    width: 75%;
+  }
+  .titel-voornaam,
+  .titel-footer {
+    font-size: 5em;
+  }
+  .titel-achternaam,
+  .titel-contact {
+    font-size: 5.5em;
+  }
+  .logo {
+    width: 150px;
+  }
+  .nav-box {
+    font-size: 1em;
+  }
+  .about p {
+    padding: 75px;
+  }
+  .about p,
+  .kolom1 {
+    grid-column: 1 / span 2;
+  }
+  .about img,
+  .kolom2 {
+    grid-column: 2 / span 2;
+  }
+  .kolom1 {
+    width: 60%;
+    margin-right: 5rem;
+  }
+  .kolom2 {
+    width: 60%;
+    margin-top: 50px;
+    margin-left: 5rem;
+    grid-row: 1;
+  }
+  .project1 {
+    grid-column: 1 / span 2;
+  }
+  .project2 {
+    grid-column: 2 / span 2;
+  }
+  .portofolio p {
+    width: 80%;
+    margin: auto;
+  }
+  .project2 img,
+  .project1 img {
+    transition: transform 1.5s linear 250ms;
+  }
+  .project1 img:hover {
+    border-radius: 25px;
+    transform: translateX(150px) translateY(-50px) scale(1.6);
+  }
+  .project2 img:hover {
+    border-radius: 25px;
+    transform: translateX(-150px) translateY(-50px) scale(1.6);
+  }
+  .hobbys {
+    display: flex;
+    flex-flow: row wrap;
+  }
+  div.foto-blok:nth-child(odd) {
+    flex: 1 0 45%;
+    margin-right: 25px;
+  }
+  div.foto-blok:nth-child(even) {
+    flex: 1 0 45%;
+  }
+  div.foto-blok:nth-child(2) {
+    margin-top: 100px;
+  }
+  div.foto-blok:nth-last-child(2) {
+    margin-bottom: 0;
+  }
+  .iconen {
+    grid-row: 5;
+    align-self: stretch;
+  }
+  .icon {
+    width: 85px;
+  }
+}

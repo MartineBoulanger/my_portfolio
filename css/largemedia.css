@@ -1,0 +1,88 @@
+@media (min-width: 1200px) {
+  .main-content {
+    width: 80%;
+  }
+  .titel-voornaam,
+  .titel-achternaam {
+    grid-column: 4 / span 3;
+    justify-self: center;
+  }
+  .titel-voornaam {
+    grid-row: 1;
+  }
+  .titel-achternaam {
+    grid-row: 2;
+  }
+  .logo {
+    grid-column: 1 / span 2;
+    width: 175px;
+  }
+  .scroller {
+    grid-row: 4 / span 2;
+    align-self: center;
+  }
+  div.foto-blok:nth-child(odd) {
+    flex: 1 0 25%;
+  }
+  div.foto-blok:nth-child(even) {
+    flex: 1 0 25%;
+    margin-right: 25px;
+  }
+  div.foto-blok:nth-child(3) {
+    margin-top: 100px;
+  }
+  div.foto-blok:nth-child(4) {
+    margin-bottom: 0;
+  }
+  .titel-footer,
+  .titel-contact {
+    grid-column: 1 / span 3;
+    grid-row: 3 / span 2;
+    align-self: center;
+  }
+  .about p,
+  .portofolio p,
+  div.tekstvak {
+    font-size: 0.8em;
+  }
+  .kolom1,
+  .kolom2 {
+    width: 50%;
+  }
+  .icon {
+    width: 100px;
+  }
+}
+
+@media (min-width: 1366px) {
+  .titel-voornaam,
+  .titel-achternaam {
+    grid-column: 4 / span 3;
+  }
+  .portofolio p,
+  div.tekstvak,
+  .about p {
+    font-size: 0.9em;
+  }
+  footer p {
+    margin-top: 250px;
+  }
+}
+
+@media (min-width: 1500px) {
+  .portofolio p,
+  div.tekstvak,
+  .about p {
+    font-size: 1em;
+  }
+  .logo {
+    grid-column: 2 / span 2;
+  }
+}
+
+@media (min-width: 1600px) {
+  .titel-voornaam,
+  .titel-achternaam {
+    grid-column: 6 / span 3;
+  }
+}

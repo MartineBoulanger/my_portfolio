@@ -1,0 +1,382 @@
+/* ------------------------------------------------- */
+/*                   Algemene begin                  */
+/* ------------------------------------------------- */
+@import 'normalize.css';
+body {
+  margin: 0;
+  font-size: 20px;
+  font-family: 'Roboto', Verdana, Helvetica, sans-serif;
+  color: #030d19;
+  line-height: 1.5;
+}
+img {
+  width: 100%;
+  height: auto;
+}
+h1,
+h2 {
+  font-family: 'Victor Mono', sans-serif;
+  color: #030d19;
+}
+a:link,
+a:visited {
+  text-decoration: none;
+  color: #030d19;
+}
+a:hover,
+a:active {
+  text-decoration: line-through;
+}
+.container {
+  background-color: #15c3ff;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+  grid-auto-rows: minmax(100px, auto);
+}
+.main-content {
+  grid-row: 1 / span 4;
+  grid-column: 1 / -1;
+  width: 100%;
+  z-index: 2;
+  box-shadow: 0 10px 30px 0 rgba(3, 13, 25, 0.8),
+    0 4px 10px 0 rgba(3, 13, 25, 0.8);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+  grid-auto-rows: minmax(100px, auto);
+}
+#about,
+#skills,
+#portofolio,
+#hobbys {
+  grid-column: 1 / -1;
+  padding: 100px 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+  grid-auto-rows: minmax(100px, auto);
+}
+section h1 {
+  grid-column: 1 / -1;
+  grid-row: 1;
+  justify-self: center;
+  font-style: italic;
+  letter-spacing: -8px;
+  font-size: 3.5em;
+  width: 100%;
+  margin: 0;
+  text-align: center;
+}
+.about,
+.skills,
+.portofolio,
+.hobbys {
+  grid-row: 2;
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-auto-rows: minmax(200px, auto);
+}
+#about,
+#portofolio {
+  background-color: #fff;
+}
+#skills,
+#hobbys {
+  background-color: #f8f8f8;
+}
+header,
+footer {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #030d19;
+  color: #fff;
+  display: grid;
+  height: auto;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-auto-rows: minmax(200px, auto);
+}
+/* ------------------------------------------------- */
+/*                   Algemene einde                  */
+/* ------------------------------------------------- */
+
+/* ------------------------------------------------- */
+/*                    header begin                   */
+/* ------------------------------------------------- */
+header {
+  background-image: url('../img/header-achtergrond-vol.png');
+}
+header h1,
+footer h1 {
+  justify-self: center;
+}
+.titel-voornaam {
+  font-style: italic;
+  color: #15c3ff;
+  font-weight: 300;
+  text-transform: capitalize;
+  grid-column: 1 / -1;
+  grid-row: 2;
+  margin-bottom: 0;
+  margin-top: 150px;
+  font-size: 3em;
+}
+.titel-achternaam {
+  text-transform: uppercase;
+  color: #ffffff;
+  grid-row: 3;
+  grid-column: 1 / -1;
+  margin-top: -1.5rem;
+  font-size: 3.5em;
+}
+header p {
+  font-family: 'Victor Mono', sans-serif;
+  font-style: italic;
+  text-align: left;
+  grid-column: 1 / -1;
+  padding-top: 15px;
+  padding-left: 25px;
+  grid-row: 1;
+  font-weight: bold;
+  font-size: 0.8em;
+  color: #707070;
+}
+.logo {
+  width: 100px;
+  grid-row: 2;
+  grid-column: 1 / -1;
+  margin-top: -3.3rem;
+  justify-self: center;
+}
+.scroller {
+  text-align: center;
+  background-color: #030d19;
+  color: #15c3ff;
+  width: 30px;
+  padding-bottom: 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  justify-self: center;
+  height: 50px;
+  grid-column: 1 / -1;
+  grid-row: 5;
+}
+/* ------------------------------------------------- */
+/*                    header einde                   */
+/* ------------------------------------------------- */
+
+/* ------------------------------------------------- */
+/*                   navigatie begin                 */
+/* ------------------------------------------------- */
+
+.nav-box {
+  visibility: hidden;
+  grid-column: 1 / 2;
+  grid-row: 1 / 5;
+}
+.navigatie {
+  display: table;
+  font-family: 'Victor Mono', sans-serif;
+  font-style: italic;
+  position: sticky;
+  left: 0;
+  top: 18%;
+}
+.navigatie ul {
+  list-style-type: none;
+}
+.navigatie ul li {
+  font-size: 1.2em;
+  transform: rotate(-45deg);
+  margin-top: 50px;
+  margin-left: -2.5rem;
+}
+/* ------------------------------------------------- */
+/*                   navigatie einde                 */
+/* ------------------------------------------------- */
+
+/* ------------------------------------------------- */
+/*                     about begin                   */
+/* ------------------------------------------------- */
+.about p {
+  grid-column: 1 / -1;
+  grid-row: 1;
+  justify-self: center;
+  font-size: 0.7em;
+  margin: 2rem;
+  padding: 50px 0;
+  text-align: justify;
+}
+.about img {
+  grid-column: 1 / -1;
+  grid-row: 2;
+  justify-self: center;
+  width: 75%;
+}
+/* ------------------------------------------------- */
+/*                    about einde                    */
+/* ------------------------------------------------- */
+
+/* ------------------------------------------------- */
+/*                    skills begin                   */
+/* ------------------------------------------------- */
+.skills h2 {
+  font-size: 1.5em;
+  margin-bottom: 5px;
+}
+.kolom1,
+.kolom2 {
+  width: 80%;
+  margin: 0;
+  grid-column: 1 / -1;
+  justify-self: center;
+}
+.kolom1 {
+  grid-row: 1;
+  margin-top: 50px;
+}
+.kolom2 {
+  grid-row: 2;
+}
+.skill-bar {
+  border-radius: 25px;
+  border: 1px solid #030d19;
+  overflow: hidden;
+  background: linear-gradient(to right, #030d19, #15c3ff);
+}
+.skill-bar div {
+  height: 25px;
+  background-color: #dbeef4;
+}
+/* ------------------------------------------------- */
+/*                    skills einde                   */
+/* ------------------------------------------------- */
+
+/* ------------------------------------------------- */
+/*                 portofolio begin                  */
+/* ------------------------------------------------- */
+.project1,
+.project2 {
+  width: 75%;
+  justify-self: center;
+}
+.project1 {
+  grid-row: 1;
+  margin: 100px 0;
+}
+.project2 {
+  grid-row: 2;
+}
+.portofolio p {
+  background-color: #dbeef4;
+  font-size: 0.7em;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 4px 8px 0 rgba(3, 13, 25, 0.2),
+    0 6px 20px 0 rgba(3, 13, 25, 0.19);
+}
+.portofolio img:hover {
+  box-shadow: 20px 20px 40px 10px #dbeef4 inset;
+}
+/* ------------------------------------------------- */
+/*                 portofolio einde                  */
+/* ------------------------------------------------- */
+
+/* ------------------------------------------------- */
+/*                   hobby's begin                   */
+/* ------------------------------------------------- */
+.hobbys {
+  width: 80%;
+  margin: 0;
+  justify-self: center;
+}
+div.foto-blok:first-child {
+  margin-top: 100px;
+}
+div.foto-blok:last-child {
+  margin-bottom: 0;
+}
+div.foto-blok {
+  background-color: #dbeef4;
+  box-shadow: 0 4px 8px 0 rgba(3, 13, 25, 0.2),
+    0 6px 20px 0 rgba(3, 13, 25, 0.19);
+  margin-bottom: 25px;
+  transition: all 300ms linear;
+}
+div.tekstvak {
+  text-align: center;
+  padding: 10px 20px;
+  font-size: 0.7em;
+}
+div.foto-blok:hover {
+  cursor: pointer;
+  border: 1px solid #030d19;
+  transform: scale(1.08);
+}
+
+/* ------------------------------------------------- */
+/*                   hobby's einde                   */
+/* ------------------------------------------------- */
+
+/* ------------------------------------------------- */
+/*                   footer begin                    */
+/* ------------------------------------------------- */
+footer {
+  background-image: url('../img/footer-achtergrond-vol.png');
+}
+.titel-footer,
+.titel-contact {
+  grid-column: 1 / -1;
+  grid-row: 2 / span 2;
+  align-self: center;
+  justify-self: center;
+}
+.titel-footer {
+  font-size: 3em;
+  font-style: italic;
+  color: #15c3ff;
+  font-weight: 300;
+  padding-bottom: 1em;
+}
+.titel-contact {
+  text-transform: uppercase;
+  color: #ffffff;
+  font-size: 3.5em;
+  padding-top: 1em;
+}
+footer p {
+  font-family: 'Victor Mono', sans-serif;
+  font-style: italic;
+  grid-column: 1 / -1;
+  grid-row: 5;
+  justify-self: end;
+  padding-right: 25px;
+  font-weight: bold;
+  font-size: 1.1em;
+  color: #707070;
+  margin-top: 150px;
+}
+.iconen {
+  grid-column: 1 / -1;
+  grid-row: 4;
+  justify-self: center;
+  align-self: center;
+}
+.icon {
+  width: 60px;
+  margin: 15px;
+}
+.icon:hover {
+  transform: scale(1.1);
+}
+#return-btn {
+  visibility: hidden;
+  position: fixed;
+  bottom: 150px;
+  right: 50px;
+  z-index: 10;
+  width: 75px;
+  opacity: 0.5;
+  cursor: pointer;
+}
+/* ------------------------------------------------- */
+/*                   footer einde                    */
+/* ------------------------------------------------- */
