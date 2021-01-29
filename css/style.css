@@ -179,7 +179,7 @@ header p {
   font-style: italic;
   position: sticky;
   left: 0;
-  top: 18%;
+  top: 25%;
 }
 .navigatie ul {
   list-style-type: none;
@@ -204,7 +204,6 @@ header p {
   align-self: center;
   font-size: 0.7em;
   margin: 0 2rem;
-  text-align: justify;
 }
 .about img {
   grid-column: 1 / -1;
@@ -216,7 +215,9 @@ header p {
 }
 q{
   font-weight: bold;
-  font-style: italic;
+  font-size: 1em;
+  width: 80%;
+  text-align: center;
 }
 /* ------------------------------------------------- */
 /*                    about einde                    */
