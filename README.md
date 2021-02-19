@@ -6,6 +6,6 @@ Please keep in mind that these pictures are my own and if you want to use them, 
 
 The code is free to use.
 
-I will updat this portfolio from time to time.
+I will update this portfolio from time to time.
 
 Thanks!
