@@ -1,0 +1,423 @@
+@media (min-width: 768px) and (max-width: 1049px) {
+  body {
+    scroll-behavior: smooth;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-auto-rows: minmax(100px, auto);
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+  body::-webkit-scrollbar {
+    display: none;
+  }
+  .headerbox,
+  .aboutmebox,
+  .skillsbox,
+  .projectsbox,
+  .contactbox {
+    grid-column: 1 / -1;
+  }
+  .headerbox {
+    grid-row: 1;
+  }
+  .aboutmebox {
+    grid-row: 2;
+  }
+  .skillsbox {
+    grid-row: 3;
+  }
+  .projectsbox {
+    grid-row: 4;
+  }
+  .contactbox {
+    grid-row: 5;
+  }
+  .headerbox1,
+  .aboutmebox1,
+  .skillsbox1,
+  .projectsbox1,
+  .contactbox1 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(75px, 1fr));
+    grid-auto-rows: minmax(100px, auto);
+  }
+  .eerstep {
+    grid-column: 1 / -1;
+    grid-row: 1;
+  }
+  .laatstep {
+    grid-column: 1 / -1;
+    grid-row: 5;
+    align-self: end;
+  }
+  .typewriter {
+    grid-column: 3 / -1;
+    grid-row: 2;
+    margin-bottom: 5rem;
+  }
+  .aboutmetitle,
+  .skillstitle,
+  .projectstitle,
+  .contacttitle {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    margin-left: 2rem;
+    align-self: end;
+  }
+  .headeravatar {
+    grid-column: 4 / span 4;
+    grid-row: 3;
+    justify-self: start;
+  }
+  .skillsavatar {
+    grid-column: 8 / 10;
+    grid-row: 3;
+    align-self: end;
+  }
+  .projectsavatar {
+    grid-column: 6;
+    grid-row: 2;
+  }
+  .contactavatar {
+    grid-column: 1 / 4;
+    grid-row: 3;
+    align-self: start;
+    transform: rotateY(180deg);
+  }
+  .mijnfoto {
+    grid-column: 2 / 6;
+    grid-row: 3;
+    opacity: .7;
+    width: 80%;
+    justify-self: center;
+    align-self: center;
+    float: left;
+  }
+  div.aboutmyself {
+    grid-column: 6 / -1;
+    grid-row: 3;
+    width: 80%;
+    padding: 0 20px;
+    font-size: .8em;
+    border-left: 4px solid rgba(0, 255, 0, 0.7);
+    float: right;
+  }
+  .skillsbox2 {
+    margin-top: 10px;
+    grid-column: 1 / -1;
+    grid-row: 2;
+    margin-left: 50px;
+  }
+  .slideshow {
+    grid-column: 1 / -1;
+    grid-row: 3;
+    width: 55%;
+    justify-self: center;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+  }
+  .slide {
+    align-self: center;
+  }
+  .prev {
+    align-self: flex-start;
+    margin-top: -15rem;
+  }
+  .next {
+    margin-top: -18px;
+    align-self: flex-end;
+  }
+  div.contactme {
+    grid-column: 5 / -1;
+    grid-row: 3;
+    width: 100%;
+    padding-left: 20px;
+    border-left: 4px solid rgba(0, 255, 0, 0.7);
+    font-size: 1em;
+  }
+  .cd-section {
+    width: 100vw;
+    height: 100vh;
+  }
+  .cd-section h1 {
+    line-height: 1.2;
+    font-size: 2em;
+    font-weight: 300;
+    color: rgba(0, 255, 0, 0.7);
+    margin: auto;
+  }
+  .eerstep,
+  .laatstep {
+    font-family: 'Victor Mono', monospace;
+    color: rgba(0, 255, 0, 0.3);
+    padding: 15px;
+    margin: 0;
+    font-size: .8em;
+  }
+  .underscore {
+    color: #fff;
+    background: #fff;
+    font-weight: bolder;
+    animation: pinking 1s linear infinite both;
+    text-shadow: none;
+  }
+  .aboutmyself p,
+  .contactme p {
+    margin: 5% auto;
+    line-height: 1.3;
+  }
+  strong {
+    font-weight: bold;
+    line-height: 1.5;
+  }
+  .aanhalingsteken {
+    font-family: 'Victor Mono', monospace;
+    color: rgba(0, 255, 0, 0.7);
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+  .pijl {
+    font-family: 'Victor Mono', monospace;
+    color: rgba(0, 255, 0, 0.7);
+    font-weight: bold;
+  }
+  .omslag {
+    visibility: hidden;
+  }
+  /* ---------- header begin ---------- */
+  .typewriter h1 {
+    margin-left: 0;
+    font-size: 2.5em;
+    color: rgba(0, 255, 0, 0.7);
+    border-right: 0.15em solid #fff;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  .typewriter h1:nth-child(1) {
+    width: 2em;
+    animation: type 1s steps(7, end);
+    animation-fill-mode: forwards;
+  }
+  .typewriter h1:nth-child(2) {
+    width: 11.5em;
+    opacity: 0;
+    animation: type2 2s steps(25, end);
+    animation-delay: 1.5s;
+    animation-fill-mode: forwards;
+  }
+  .typewriter h1:nth-child(3) {
+    width: 9.5em;
+    opacity: 0;
+    animation: type3 2s steps(25, end), blink 0.5s step-end infinite alternate;
+    animation-delay: 4.2s;
+    animation-fill-mode: forwards;
+  }
+  /* ---------- header einde ---------- */
+  /* ---------- skills begin ---------- */
+  .skillsbox2 h2 {
+    font-size: .9em;
+    padding: 9px;
+    margin-top: 10px;
+  }
+  .skillskolom1, .skillskolom2{
+    float: left;
+    margin-right: 50px;
+    width: 40%;
+  }
+  .skillbar,
+  .skillitem {
+    height: 20px;
+    padding: 3px;
+    border-radius: 25px;
+    border: 1px solid #fff;
+    width: 100%;
+  }
+  .skillitem {
+    padding: 3px;
+    height: 12px;
+    border: none;
+    background: rgba(0, 255, 0, 0.7);
+  }
+  .skillgit {
+    width: 100%;
+  }
+  .skillcss {
+    width: 94%;
+  }
+  .skilldrupal {
+    width: 90%;
+  }
+  .skillhtml,
+  .skilljs {
+    width: 87%;
+  }
+  .skillps,
+  .skillxd,
+  .skillbootstrap {
+    width: 78%;
+  }
+  .skilljquery {
+    width: 65%;
+  }
+  .skillphp {
+    width: 50%;
+  }
+  .skillreact {
+    width: 40%;
+  }
+  .skillvue {
+    width: 10px;
+  }
+  /* ---------- skills einde ---------- */
+  /* ---------- projects begin ---------- */
+  .prev,
+  .next {
+    cursor: pointer;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1em;
+    user-select: none;
+  }
+  .next:hover,
+  .prev:hover {
+    color: rgba(0, 255, 0, 0.7);
+  }
+  .titlep {
+    font-size: 1.2em;
+    padding-bottom: 5px;
+    color: rgba(0, 255, 0, 0.7);
+    font-weight: bold;
+    font-family: 'Victor Mono', monospace;
+  }
+  .content {
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    width: 100%;
+    padding: 20px;
+    font-size: .7em;
+    line-height: 1.2;
+    opacity: 1;
+  }
+  /* ---------- projects einde ---------- */
+  /* ---------- contact begin ---------- */
+  p.mediaicons {
+    margin-bottom: 0;
+  }
+  .mediaicons img {
+    width: 40px;
+    margin: 0 5px;
+  }
+  /* ---------- contact einde ---------- */
+  /* ---------- pop up form ----------- */
+  #formdiv {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: none;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.8);
+    overflow: auto;
+    font-family: 'Victor Mono', monospace;
+  }
+  #close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 20px;
+    height: 20px;
+    border-radius: 15px;
+    font-weight: bolder;
+    font-size: 0.8em;
+    background: rgba(0, 255, 0, 0.7);
+    cursor: pointer;
+    text-align: center;
+    padding: 3px;
+    color: #000;
+  }
+  div#popupContact {
+    position: absolute;
+    left: 25%;
+    top: 10%;
+  }
+  form {
+    width: 400px;
+    padding: 25px;
+    border: 2px solid #fff;
+    border-radius: 25px;
+    background-color: #000;
+    box-shadow: 0px 0px 35px 0px rgba(0, 255, 0, 0.3);
+  }
+  h3 {
+    padding: 20px 35px;
+    margin: -10px -50px;
+    text-align: center;
+    font-size: 1.8em;
+    color: rgba(0, 255, 0, 0.7);
+    font-family: 'Victor Mono', monospace;
+  }
+  input[type='text'] {
+    width: 100%;
+    padding: 15px 10px;
+    margin-top: 30px;
+    border: 1px solid #fff;
+    outline: none;
+    border-radius: 10px;
+    font-size: 1.1em;
+    background: #000;
+    color: rgba(0, 255, 0, 0.7);
+  }
+  textarea {
+    width: 100%;
+    height: 150px;
+    padding: 15px 10px;
+    resize: none;
+    margin-top: 30px;
+    border: 1px solid #fff;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    font-size: 1.1em;
+    outline: none;
+    background: #000;
+    color: #fff;
+  }
+  ::placeholder {
+    font-family: 'Victor Mono', monospace;
+    font-style: italic;
+    color: rgba(0, 255, 0, 0.3);
+  }
+  #zendBtn {
+    width: 100%;
+    text-align: center;
+    display: block;
+    background-color: rgba(0, 255, 0, 0.7);
+    color: #000;
+    border: 1px solid rgba(0, 255, 0, 0.7);
+    padding: 10px 0;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 10px;
+    font-weight: bold;
+    outline: none;
+  }
+  #form span {
+    color: red;
+    font-weight: 700;
+  }
+  button {
+    width: 150px;
+    height: 45px;
+    border-radius: 15px;
+    outline: none;
+    background-color: #000;
+    border: 3px solid rgba(0, 255, 0, 0.7);
+    box-shadow: 0px 0px 8px 0px rgba(255, 255, 255, 0.8);
+    color: #fff;
+    font-size: 1em;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  /* ---------- pop up form ----------- */
+}

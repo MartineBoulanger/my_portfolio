@@ -1,0 +1,441 @@
+@media (min-width: 1050px) and (max-width: 1365px) {
+  body {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+
+  body::-webkit-scrollbar {
+    display: none;
+  }
+
+  .cd-section h1 {
+    position: fixed;
+    left: 12vw;
+    top: 15vh;
+    line-height: 1.2;
+    font-size: 3em;
+    font-weight: 300;
+    color: rgba(0, 255, 0, 0.7);
+  }
+
+  .eerstep,
+  .laatstep {
+    font-family: 'Victor Mono', monospace;
+    color: rgba(0, 255, 0, 0.3);
+    padding: 15px;
+    margin: 0;
+    position: fixed;
+    left: 0;
+  }
+  .eerstep {
+    top: 0;
+  }
+  .laatstep {
+    bottom: 0;
+  }
+
+  .underscore {
+    color: #fff;
+    background: #fff;
+    font-weight: bolder;
+    animation: pinking 1s linear infinite both;
+    text-shadow: none;
+  }
+
+  div.aboutmyself {
+    position: fixed;
+    font-size: .85em;
+    left: 50vw;
+    top: 38vh;
+    width: 40vw;
+    padding-left: 30px;
+    border-left: 6px solid rgba(0, 255, 0, 0.7);
+  }
+  div.contactme {
+    position: fixed;
+    left: 25vw;
+    top: 37vh;
+    width: 50vw;
+    padding-left: 30px;
+    border-left: 6px solid rgba(0, 255, 0, 0.7);
+  }
+
+  .aboutmyself p,
+  .contactme p {
+    margin: 5% auto;
+    line-height: 1.3;
+  }
+
+  strong {
+    font-weight: bold;
+    line-height: 1.5;
+  }
+
+  .aanhalingsteken {
+    font-family: 'Victor Mono', monospace;
+    color: rgba(0, 255, 0, 0.7);
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+
+  .pijl {
+    font-family: 'Victor Mono', monospace;
+    color: rgba(0, 255, 0, 0.7);
+    font-weight: bold;
+  }
+
+  .omslag {
+    width: 300px;
+    height: 100vh;
+    border-radius: 150px;
+    margin-right: 25px;
+    background: url('../img/binair-craicrai-2.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    float: right;
+    visibility: hidden;
+  }
+
+  /* ---------- header begin ---------- */
+  .typewriter h1:first-of-type {
+    top: 25vh;
+  }
+  .typewriter h1:nth-of-type(2) {
+    top: 40vh;
+  }
+  .typewriter h1:nth-of-type(3) {
+    top: 55vh;
+  }
+  .typewriter h1 {
+    font-size: 4em;
+    color: rgba(0, 255, 0, 0.7);
+    border-right: 0.15em solid #fff;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  .typewriter h1:nth-child(1) {
+    width: 2em;
+    animation: type 1s steps(7, end);
+    animation-fill-mode: forwards;
+  }
+  .typewriter h1:nth-child(2) {
+    width: 11.5em;
+    opacity: 0;
+    animation: type2 2s steps(25, end);
+    animation-delay: 1.5s;
+    animation-fill-mode: forwards;
+  }
+  .typewriter h1:nth-child(3) {
+    width: 9.5em;
+    opacity: 0;
+    animation: type3 2s steps(25, end), blink 0.5s step-end infinite alternate;
+    animation-delay: 4.2s;
+    animation-fill-mode: forwards;
+  }
+
+  .headeravatar {
+    width: 200px;
+    position: fixed;
+    left: 25%;
+    bottom: -4px;
+  }
+  /* ---------- header einde ---------- */
+
+  /* ---------- about begin ---------- */
+  .mijnfoto {
+    position: fixed;
+    top: 28vh;
+    left: 14vw;
+    width: 30vw;
+    opacity: 0.8;
+  }
+  /* ---------- about einde ---------- */
+
+  /* ---------- skills begin ---------- */
+  .skillskolom1,
+  .skillskolom2 {
+    float: left;
+    position: fixed;
+    top: 30vh;
+  }
+  .skillskolom1 {
+    left: 15vw;
+  }
+  .skillskolom2 {
+    left: 50vw;
+  }
+
+  .skillsbox2 h2 {
+    font-size: 1.2em;
+    padding: 9px;
+    margin-top: 10px;
+  }
+
+  .skillbar,
+  .skillitem {
+    height: 20px;
+    padding: 3px;
+    border-radius: 25px;
+    border: 1px solid #fff;
+    width: 300px;
+  }
+  .skillitem {
+    padding: 3px;
+    height: 12px;
+    border: none;
+    background: rgba(0, 255, 0, 0.7);
+  }
+
+  .skillgit {
+    width: 100%;
+  }
+  .skillcss {
+    width: 94%;
+  }
+  .skilldrupal {
+    width: 90%;
+  }
+  .skillhtml,
+  .skilljs {
+    width: 87%;
+  }
+  .skillps,
+  .skillxd,
+  .skillbootstrap {
+    width: 78%;
+  }
+  .skilljquery {
+    width: 65%;
+  }
+  .skillphp {
+    width: 50%;
+  }
+  .skillreact {
+    width: 40%;
+  }
+  .skillvue {
+    width: 10px;
+  }
+
+  .skillsavatar {
+    position: fixed;
+    bottom: -8px;
+    right: 5vw;
+    width: 200px;
+  }
+  /* ---------- skills einde ---------- */
+
+  /* ---------- projects begin ---------- */
+  .slideshow {
+    width: 600px;
+    position: fixed;
+    top: 33vh;
+    left: 25vw;
+  }
+  .slide {
+    display: none;
+  }
+  .prev,
+  .next {
+    position: fixed;
+    top: 55vh;
+    cursor: pointer;
+    color: #fff;
+    font-weight: bold;
+    font-size: 2em;
+    user-select: none;
+  }
+  .prev {
+    left: 20vw;
+  }
+  .next {
+    right: 20vw;
+  }
+  .next:hover,
+  .prev:hover {
+    color: rgba(0, 255, 0, 0.7);
+  }
+  .dots {
+    position: fixed;
+    bottom: 12vh;
+    left: 50vw;
+  }
+  .dot {
+    cursor: pointer;
+    height: 10px;
+    width: 10px;
+    margin: 0 2px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 1s ease;
+  }
+  .active,
+  .dot:hover {
+    background-color: rgba(0, 255, 0, 0.7);
+  }
+  .titlep {
+    font-size: 1.4em;
+    padding-bottom: 15px;
+    color: rgba(0, 255, 0, 0.7);
+    font-weight: bold;
+    font-family: 'Victor Mono', monospace;
+  }
+  .content {
+    position: absolute;
+    bottom: 0;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    width: 100%;
+    padding: 20px;
+    line-height: 1.5;
+    opacity: 0;
+    transition: 1s linear;
+  }
+  .slide:hover .content {
+    cursor: pointer;
+    opacity: 1;
+  }
+  .slide:hover {
+    cursor: pointer;
+  }
+
+  .projectsavatar {
+    position: fixed;
+    top: 5vh;
+    right: 15vw;
+    width: 175px;
+  }
+  /* ---------- projects einde ---------- */
+
+  /* ---------- contact begin ---------- */
+  p.mediaicons {
+    margin-bottom: 0;
+  }
+  .mediaicons img {
+    width: 40px;
+    margin: 0 10px;
+  }
+
+  .contactavatar {
+    position: fixed;
+    right: 0;
+    top: 33vh;
+    width: 300px;
+  }
+  /* ---------- contact einde ---------- */
+
+  /* ---------- pop up form ----------- */
+  #formdiv {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: none;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.8);
+    overflow: auto;
+    font-family: 'Victor Mono', monospace;
+  }
+  #close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 20px;
+    height: 20px;
+    border-radius: 15px;
+    font-weight: bolder;
+    font-size: 0.8em;
+    background: rgba(0, 255, 0, 0.7);
+    cursor: pointer;
+    text-align: center;
+    padding: 3px;
+    color: #000;
+  }
+  div#popupContact {
+    position: absolute;
+    left: 30%;
+    top: 15%;
+  }
+  form {
+    width: 400px;
+    padding: 25px;
+    border: 2px solid #fff;
+    border-radius: 25px;
+    background-color: #000;
+    box-shadow: 0px 0px 35px 0px rgba(0, 255, 0, 0.3);
+  }
+  h3 {
+    padding: 20px 35px;
+    margin: -10px -50px;
+    text-align: center;
+    font-size: 1.8em;
+    color: rgba(0, 255, 0, 0.7);
+    font-family: 'Victor Mono', monospace;
+    /* text-shadow: 0px 0px 8px #fff; */
+  }
+  input[type='text'] {
+    width: 100%;
+    padding: 15px 10px;
+    margin-top: 30px;
+    border: 1px solid #fff;
+    outline: none;
+    border-radius: 10px;
+    font-size: 1.1em;
+    background: #000;
+    color: rgba(0, 255, 0, 0.7);
+  }
+  textarea {
+    width: 100%;
+    height: 150px;
+    padding: 15px 10px;
+    resize: none;
+    margin-top: 30px;
+    border: 1px solid #fff;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    font-size: 1.1em;
+    outline: none;
+    background: #000;
+    color: #fff;
+  }
+  ::placeholder {
+    font-family: 'Victor Mono', monospace;
+    font-style: italic;
+    color: rgba(0, 255, 0, 0.3);
+  }
+  #zendBtn {
+    width: 100%;
+    text-align: center;
+    display: block;
+    background-color: rgba(0, 255, 0, 0.7);
+    color: #000;
+    border: 1px solid rgba(0, 255, 0, 0.7);
+    padding: 10px 0;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 10px;
+    font-weight: bold;
+    outline: none;
+  }
+  #form span {
+    color: red;
+    font-weight: 700;
+  }
+  button {
+    width: 150px;
+    height: 45px;
+    border-radius: 15px;
+    outline: none;
+    background-color: #000;
+    border: 3px solid rgba(0, 255, 0, 0.7);
+    box-shadow: 0px 0px 8px 0px rgba(255, 255, 255, 0.8);
+    color: #fff;
+    font-size: 1em;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  /* ---------- pop up form ----------- */
+}

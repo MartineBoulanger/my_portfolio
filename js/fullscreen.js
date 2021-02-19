@@ -34,19 +34,3 @@ function GoInFullscreen(element) {
     if (IsFullScreenCurrently()) GoOutFullscreen()
     else GoInFullscreen($('#elemFullscreen2').get(0))
   })
-  $('#myImg3').on('click', function () {
-    if (IsFullScreenCurrently()) GoOutFullscreen()
-    else GoInFullscreen($('#elemFullscreen3').get(0))
-  })
-  $('#myImg4').on('click', function () {
-    if (IsFullScreenCurrently()) GoOutFullscreen()
-    else GoInFullscreen($('#elemFullscreen4').get(0))
-  })
-  $('#myImg5').on('click', function () {
-    if (IsFullScreenCurrently()) GoOutFullscreen()
-    else GoInFullscreen($('#elemFullscreen5').get(0))
-  })
-  $('#myImg6').on('click', function () {
-    if (IsFullScreenCurrently()) GoOutFullscreen()
-    else GoInFullscreen($('#elemFullscreen6').get(0))
-  })

@@ -1,389 +1,667 @@
-/* ------------------------------------------------- */
-/*                   Algemene begin                  */
-/* ------------------------------------------------- */
-@import 'normalize.css';
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&display=swap');
-body {
-  margin: 0;
-  font-size: 20px;
-  font-family: 'Roboto', sans-serif;
-  color: #030d19;
-  line-height: 1.5;
+
+/* 
+Fonts:
+font-family: 'Roboto', sans-serif;
+font-family: 'Victor Mono', monospace; 
+*/
+
+/* 
+Kleurenpalet:
+zwart: #000;
+wit: #fff;
+groen: #00ff00; 
+*/
+
+/* ---------- algemene css begin ---------- */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
 }
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  color: #fff;
+  background-color: #000;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: #00ff00;
+  text-decoration: none;
+}
+
 img {
   width: 100%;
   height: auto;
 }
+
 h1,
-h2 {
-  font-family: 'Hachi Maru Pop', cursive;
-  color: #030d19;
-  font-size: 2.5em;
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Victor Mono', monospace;
 }
-a:link,
-a:visited {
-  text-decoration: none;
-  color: #030d19;
+
+::selection {
+  background: rgba(0, 255, 0, 0.6);
+  color: #000;
 }
-a:hover,
-a:active {
-  text-decoration: line-through;
+
+.cd-section {
+  height: 100vh;
 }
-.container {
-  background-color: #15c3ff;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, auto));
-  grid-auto-rows: minmax(100px, auto);
+
+/* ---------- scroll effect css ---------- */
+body::before {
+  /* never visible - this is used in jQuery to check the current MQ */
+  content: 'mobile';
+  display: none;
 }
-.main-content {
-  grid-row: 1 / span 4;
-  grid-column: 1 / -1;
-  width: 100%;
-  z-index: 2;
-  box-shadow: 0 10px 30px 0 rgba(3, 13, 25, 0.8),
-    0 4px 10px 0 rgba(3, 13, 25, 0.8);
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, auto));
-  grid-auto-rows: minmax(100px, auto);
+
+@media only screen and (min-width: 1050px) {
+  body::before {
+    /* never visible - this is used in jQuery to check the current MQ */
+    content: 'desktop';
+  }
 }
-#about,
-#skills,
-#portofolio,
-#hobbys {
-  grid-column: 1 / -1;
-  padding: 100px 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, auto));
-  grid-auto-rows: minmax(100px, auto);
+
+@media only screen and (min-width: 1050px) {
+  body[data-hijacking='on'] {
+    overflow: hidden;
+  }
 }
-section h1 {
-  grid-column: 1 / -1;
-  grid-row: 1;
-  justify-self: center;
-  letter-spacing: -3px;
-  font-size: 2.5em;
-  width: 100%;
-  margin: 0;
-  text-align: center;
-}
-.about,
-.skills,
-.portofolio,
-.hobbys {
-  grid-row: 2;
-  grid-column: 1 / -1;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-auto-rows: minmax(200px, auto);
-}
-#about,
-#portofolio {
-  background-color: #fff;
-}
-#skills,
-#hobbys {
-  background-color: #f8f8f8;
-}
-header,
-footer {
+
+[data-animation='parallax'] .cd-section > div,
+[data-animation='fixed'] .cd-section > div,
+[data-animation='opacity'] .cd-section > div {
+  background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: #030d19;
-  color: #fff;
-  display: grid;
-  height: auto;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-auto-rows: minmax(200px, auto);
 }
-/* ------------------------------------------------- */
-/*                   Algemene einde                  */
-/* ------------------------------------------------- */
-
-/* ------------------------------------------------- */
-/*                    header begin                   */
-/* ------------------------------------------------- */
-header {
-  background-image: url('../img/header-achtergrond-vol.png');
+[data-animation='parallax'] .cd-section:first-of-type > div,
+[data-animation='fixed'] .headerbox:first-of-type > div,
+[data-animation='opacity'] .headerbox:first-of-type > div {
+  background: #000;
 }
-header h1,
-footer h1 {
-  justify-self: center;
+[data-animation='parallax'] .cd-section:nth-of-type(2) > div,
+[data-animation='fixed'] .cd-section:nth-of-type(2) > div,
+[data-animation='opacity'] .cd-section:nth-of-type(2) > div {
+  background: #000;
 }
-.titel-voornaam {
-  font-style: italic;
-  color: #15c3ff;
-  font-weight: 300;
-  text-transform: capitalize;
-  grid-column: 1 / -1;
-  grid-row: 2;
-  margin-bottom: 0;
-  margin-top: 150px;
+[data-animation='parallax'] .cd-section:nth-of-type(3) > div,
+[data-animation='fixed'] .cd-section:nth-of-type(3) > div,
+[data-animation='opacity'] .cd-section:nth-of-type(3) > div {
+  background: #000;
 }
-.titel-achternaam {
-  text-transform: uppercase;
-  font-weight: 900;
-  color: #ffffff;
-  grid-row: 3;
-  grid-column: 1 / -1;
-  margin-top: -1.5rem;
+[data-animation='parallax'] .cd-section:nth-of-type(4) > div,
+[data-animation='fixed'] .cd-section:nth-of-type(4) > div,
+[data-animation='opacity'] .cd-section:nth-of-type(4) > div {
+  background: #000;
 }
-header p {
-  font-family: 'Hachi Maru Pop', cursive;
-  font-style: italic;
-  text-align: left;
-  grid-column: 1 / -1;
-  padding-top: 15px;
-  padding-left: 25px;
-  grid-row: 1;
-  font-weight: bold;
-  font-size: 0.8em;
-  color: #707070;
-}
-.logo {
-  width: 100px;
-  grid-row: 2;
-  grid-column: 1 / -1;
-  margin-top: -3.3rem;
-  justify-self: center;
-}
-.scroller {
-  text-align: center;
-  background-color: #030d19;
-  color: #15c3ff;
-  width: 30px;
-  padding-bottom: 15px;
-  border-radius: 5px;
-  font-weight: bold;
-  justify-self: center;
-  height: 50px;
-  grid-column: 1 / -1;
-  grid-row: 5;
-}
-/* ------------------------------------------------- */
-/*                    header einde                   */
-/* ------------------------------------------------- */
-
-/* ------------------------------------------------- */
-/*                   navigatie begin                 */
-/* ------------------------------------------------- */
-
-.nav-box {
-  visibility: hidden;
-  grid-column: 1 / 2;
-  grid-row: 1 / 5;
-}
-.navigatie {
-  display: table;
-  font-family: 'Hachi Maru Pop', cursive;
-  font-style: italic;
-  position: sticky;
-  left: 0;
-  top: 25%;
-}
-.navigatie ul {
-  list-style-type: none;
-}
-.navigatie ul li {
-  font-size: 1.2em;
-  transform: rotate(-45deg);
-  margin-top: 50px;
-  margin-left: -2.5rem;
-}
-/* ------------------------------------------------- */
-/*                   navigatie einde                 */
-/* ------------------------------------------------- */
-
-/* ------------------------------------------------- */
-/*                     about begin                   */
-/* ------------------------------------------------- */
-.about p {
-  grid-column: 1 / -1;
-  grid-row: 2;
-  justify-self: center;
-  align-self: center;
-  font-size: 0.7em;
-  margin: 0 2rem;
-}
-.about img {
-  grid-column: 1 / -1;
-  grid-row: 1;
-  justify-self: center;
-  align-self: center;
-  width: 50%;
-  padding: 100px 0;
-}
-q{
-  font-weight: bold;
-  font-size: 1em;
-  width: 80%;
-  text-align: center;
-}
-/* ------------------------------------------------- */
-/*                    about einde                    */
-/* ------------------------------------------------- */
-
-/* ------------------------------------------------- */
-/*                    skills begin                   */
-/* ------------------------------------------------- */
-.skills h2 {
-  font-family: 'Roboto', sans-serif;
-  font-size: 1.5em;
-  margin-bottom: 5px;
-}
-.kolom1,
-.kolom2 {
-  width: 80%;
-  margin: 0;
-  grid-column: 1 / -1;
-  justify-self: center;
-}
-.kolom1 {
-  grid-row: 1;
-  margin-top: 50px;
-}
-.kolom2 {
-  grid-row: 2;
-}
-.skill-bar {
-  border-radius: 25px;
-  border: 1px solid #030d19;
-  overflow: hidden;
-  background: linear-gradient(to right, #030d19, #15c3ff);
-}
-.skill-bar div {
-  height: 25px;
-  background-color: #dbeef4;
-}
-/* ------------------------------------------------- */
-/*                    skills einde                   */
-/* ------------------------------------------------- */
-
-/* ------------------------------------------------- */
-/*                 portofolio begin                  */
-/* ------------------------------------------------- */
-.project1,
-.project2 {
-  width: 75%;
-  justify-self: center;
-}
-.project1 {
-  grid-row: 1;
-  margin: 100px 0;
-}
-.project2 {
-  grid-row: 2;
-}
-.portofolio p {
-  background-color: #dbeef4;
-  font-size: 0.7em;
-  padding: 15px;
-  text-align: center;
-  box-shadow: 0 4px 8px 0 rgba(3, 13, 25, 0.2),
-    0 6px 20px 0 rgba(3, 13, 25, 0.19);
-}
-.portofolio img:hover {
-  box-shadow: 20px 20px 40px 10px #dbeef4 inset;
-}
-/* ------------------------------------------------- */
-/*                 portofolio einde                  */
-/* ------------------------------------------------- */
-
-/* ------------------------------------------------- */
-/*                   hobby's begin                   */
-/* ------------------------------------------------- */
-.hobbys {
-  width: 80%;
-  margin: 0;
-  justify-self: center;
-}
-div.foto-blok:first-child {
-  margin-top: 100px;
-}
-div.foto-blok:last-child {
-  margin-bottom: 0;
-}
-div.foto-blok {
-  background-color: #dbeef4;
-  box-shadow: 0 4px 8px 0 rgba(3, 13, 25, 0.2),
-    0 6px 20px 0 rgba(3, 13, 25, 0.19);
-  margin-bottom: 25px;
-  transition: all 300ms linear;
-}
-div.tekstvak {
-  text-align: center;
-  padding: 10px 20px;
-  font-size: 0.7em;
-}
-div.foto-blok:hover {
-  cursor: pointer;
-  border: 1px solid #030d19;
-  transform: scale(1.08);
+[data-animation='parallax'] .cd-section:nth-of-type(5) > div,
+[data-animation='fixed'] .cd-section:nth-of-type(5) > div,
+[data-animation='opacity'] .cd-section:nth-of-type(5) > div {
+  background: #000;
 }
 
-/* ------------------------------------------------- */
-/*                   hobby's einde                   */
-/* ------------------------------------------------- */
+@media only screen and (min-width: 1050px) {
+  [data-hijacking='on'] .cd-section {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+  [data-hijacking='on'] .cd-section > div {
+    visibility: visible;
+  }
+  [data-hijacking='off'] .cd-section > div {
+    opacity: 0;
+  }
+  [data-animation='rotate'] .cd-section {
+    -webkit-perspective: 1800px;
+    -moz-perspective: 1800px;
+    perspective: 1800px;
+  }
+  [data-hijacking='on'][data-animation='rotate']
+    .cd-section:not(:first-of-type) {
+    -webkit-perspective-origin: center 0;
+    -moz-perspective-origin: center 0;
+    perspective-origin: center 0;
+  }
+  [data-animation='scaleDown'] .cd-section > div,
+  [data-animation='gallery'] .cd-section > div,
+  [data-animation='catch'] .cd-section > div {
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0.4);
+  }
+  [data-animation='opacity'] .cd-section.visible > div {
+    z-index: 1;
+  }
+}
 
-/* ------------------------------------------------- */
-/*                   footer begin                    */
-/* ------------------------------------------------- */
-footer {
-  background-image: url('../img/footer-achtergrond-vol.png');
+@media only screen and (min-width: 1050px) {
+  .cd-section:first-of-type > div::before {
+    display: none;
+  }
 }
-.titel-footer,
-.titel-contact {
-  grid-column: 1 / -1;
-  grid-row: 2 / span 2;
-  align-self: center;
-  justify-self: center;
+
+@media only screen and (min-width: 1050px) {
+  .cd-section > div {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  [data-hijacking='on'] .cd-section > div {
+    position: absolute;
+  }
+  [data-animation='rotate'] .cd-section > div {
+    -webkit-transform-origin: center bottom;
+    -moz-transform-origin: center bottom;
+    -ms-transform-origin: center bottom;
+    -o-transform-origin: center bottom;
+    transform-origin: center bottom;
+  }
 }
-.titel-footer {
-  font-style: italic;
-  color: #fff;
-  font-weight: 300;
-  padding-bottom: 1em;
-}
-.titel-contact {
-  text-transform: uppercase;
-  font-weight: 900;
-  color: #15c3ff;
-  padding-top: 1em;
-}
-footer p {
-  font-family: 'Hachi Maru Pop', cursive;
-  font-style: italic;
-  grid-column: 1 / -1;
-  grid-row: 5;
-  justify-self: end;
-  padding-right: 25px;
-  font-weight: bold;
-  color: #707070;
-  margin-top: 150px;
-}
-.iconen {
-  grid-column: 1 / -1;
-  grid-row: 4;
-  justify-self: center;
-  align-self: center;
-}
-.icon {
-  width: 60px;
-  margin: 5px;
-}
-.icon:hover {
-  transform: scale(1.1);
-}
-#return-btn {
-  visibility: hidden;
+
+/* ---------- scrollbar buttons links ---------- */
+.cd-vertical-nav {
   position: fixed;
-  bottom: 150px;
-  right: 50px;
-  z-index: 10;
-  width: 75px;
-  opacity: 0.5;
-  cursor: pointer;
+  z-index: 1;
+  left: 0;
+  top: 50%;
+  bottom: auto;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  display: none;
 }
-/* ------------------------------------------------- */
-/*                   footer einde                    */
-/* ------------------------------------------------- */
+.cd-vertical-nav a {
+  display: block;
+  height: 50px;
+  width: 95px;
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+  background: url(../img/thumb_down.png) no-repeat center center;
+  background-size: 100%;
+}
+.cd-vertical-nav a.cd-prev {
+  display: block;
+  height: 70px;
+  width: 95px;
+  background: url(../img/thumb_up.png) no-repeat center center;
+  transform: rotate(10deg);
+  background-size: 97%;
+  margin-bottom: 10px;
+}
+.cd-vertical-nav a.inactive {
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity 0.2s 0s, visibility 0s 0.2s;
+  -moz-transition: opacity 0.2s 0s, visibility 0s 0.2s;
+  transition: opacity 0.2s 0s, visibility 0s 0.2s;
+}
+
+@media only screen and (min-width: 1050px) {
+  .cd-vertical-nav {
+    display: block;
+  }
+}
+/* ---------- algemene css einde ---------- */
+
+@media (min-width: 1920px) {
+  body{
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+
+  body::-webkit-scrollbar {
+    display: none;
+  }
+
+  .cd-section h1 {
+    position: fixed;
+    left: 15vw;
+    top: 15vh;
+    line-height: 1.2;
+    font-size: 4em;
+    font-weight: 300;
+    color: rgba(0, 255, 0, 0.7);
+  }
+
+  .eerstep,
+  .laatstep {
+    font-family: 'Victor Mono', monospace;
+    color: rgba(0, 255, 0, 0.3);
+    padding: 15px;
+    margin: 0;
+    position: fixed;
+    left: 0;
+  }
+  .eerstep {
+    top: 0;
+  }
+  .laatstep {
+    bottom: 0;
+  }
+
+  .underscore {
+    color: #fff;
+    background: #fff;
+    font-weight: bolder;
+    animation: pinking 1s linear infinite both;
+    text-shadow: none;
+  }
+
+  div.aboutmyself,
+  div.contactme {
+    position: fixed;
+    width: 40vw;
+    padding-left: 30px;
+    border-left: 6px solid rgba(0, 255, 0, 0.7);
+  }
+  div.aboutmyself {
+    left: 45vw;
+    top: 26vh;
+  }
+  div.contactme {
+    left: 35vw;
+    top: 30vh;
+  }
+
+  .aboutmyself p,
+  .contactme p {
+    margin: 5% auto;
+    line-height: 1.5;
+  }
+
+  strong {
+    font-weight: bold;
+    line-height: 1.5;
+  }
+
+  .aanhalingsteken {
+    font-family: 'Victor Mono', monospace;
+    color: rgba(0, 255, 0, 0.7);
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+
+  .pijl {
+    font-family: 'Victor Mono', monospace;
+    color: rgba(0, 255, 0, 0.7);
+    font-weight: bold;
+  }
+
+  .omslag {
+    width: 100px;
+    height: 100vh;
+    border-radius: 150px;
+    margin-right: 50px;
+    background: url('../img/binair-craicrai-2.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    float: right;
+  }
+
+  /* ---------- header begin ---------- */
+  .typewriter h1:first-of-type {
+    top: 25vh;
+  }
+  .typewriter h1:nth-of-type(2) {
+    top: 40vh;
+  }
+  .typewriter h1:nth-of-type(3) {
+    top: 55vh;
+  }
+  .typewriter h1 {
+    font-size: 6em;
+    color: rgba(0, 255, 0, 0.7);
+    border-right: 0.15em solid #fff;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  .typewriter h1:nth-child(1) {
+    width: 2em;
+    animation: type 1s steps(7, end);
+    animation-fill-mode: forwards;
+  }
+  .typewriter h1:nth-child(2) {
+    width: 11.5em;
+    opacity: 0;
+    animation: type2 2s steps(25, end);
+    animation-delay: 1.5s;
+    animation-fill-mode: forwards;
+  }
+  .typewriter h1:nth-child(3) {
+    width: 9.5em;
+    opacity: 0;
+    animation: type3 2s steps(25, end), blink 0.5s step-end infinite alternate;
+    animation-delay: 4.2s;
+    animation-fill-mode: forwards;
+  }
+
+  .headeravatar {
+    width: 200px;
+    position: fixed;
+    left: 25%;
+    bottom: -8px;
+  }
+  /* ---------- header einde ---------- */
+
+  /* ---------- about begin ---------- */
+  .mijnfoto {
+    position: fixed;
+    top: 27vh;
+    left: 17vw;
+    width: 20vw;
+    opacity: 0.8;
+  }
+  /* ---------- about einde ---------- */
+
+  /* ---------- skills begin ---------- */
+  .skillskolom1,
+  .skillskolom2 {
+    float: left;
+    position: fixed;
+    top: 32vh;
+  }
+  .skillskolom1 {
+    left: 22vw;
+  }
+  .skillskolom2 {
+    left: 47vw;
+  }
+
+  .skillsbox2 h2 {
+    font-size: 1.2em;
+    padding: 9px;
+    margin-top: 10px;
+  }
+
+  .skillbar,
+  .skillitem {
+    height: 20px;
+    padding: 3px;
+    border-radius: 25px;
+    border: 1px solid #fff;
+    width: 400px;
+  }
+  .skillitem {
+    padding: 3px;
+    height: 12px;
+    border: none;
+    background: rgba(0, 255, 0, 0.7);
+  }
+
+  .skillgit {
+    width: 100%;
+  }
+  .skillcss {
+    width: 94%;
+  }
+  .skilldrupal {
+    width: 90%;
+  }
+  .skillhtml,
+  .skilljs {
+    width: 87%;
+  }
+  .skillps,
+  .skillxd,
+  .skillbootstrap {
+    width: 78%;
+  }
+  .skilljquery {
+    width: 65%;
+  }
+  .skillphp {
+    width: 50%;
+  }
+  .skillreact {
+    width: 40%;
+  }
+  .skillvue {
+    width: 10px;
+  }
+
+  .skillsavatar {
+    position: fixed;
+    bottom: -8px;
+    right: 15vw;
+    width: 225px;
+  }
+  /* ---------- skills einde ---------- */
+
+  /* ---------- projects begin ---------- */
+  .slideshow {
+    width: 700px;
+    position: fixed;
+    top: 33vh;
+    left: 25vw;
+  }
+  .slide {
+    display: none;
+  }
+  .prev,
+  .next {
+    position: fixed;
+    top: 55vh;
+    cursor: pointer;
+    color: #fff;
+    font-weight: bold;
+    font-size: 2em;
+    user-select: none;
+  }
+  .prev {
+    left: 20vw;
+  }
+  .next {
+    right: 32vw;
+  }
+  .next:hover,
+  .prev:hover {
+    color: rgba(0, 255, 0, 0.7);
+  }
+  .dots {
+    position: fixed;
+    bottom: 8vh;
+    left: 42vw;
+  }
+  .dot {
+    cursor: pointer;
+    height: 10px;
+    width: 10px;
+    margin: 0 2px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 1s ease;
+  }
+  .active,
+  .dot:hover {
+    background-color: rgba(0, 255, 0, 0.7);
+  }
+  .titlep {
+    font-size: 1.4em;
+    padding-bottom: 15px;
+    color: rgba(0, 255, 0, 0.7);
+    font-weight: bold;
+    font-family: 'Victor Mono', monospace;
+  }
+  .content {
+    position: absolute;
+    bottom: 0;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    width: 100%;
+    padding: 20px;
+    line-height: 1.5;
+    opacity: 0;
+    transition: 1s linear;
+  }
+  .slide:hover .content {
+    cursor: pointer;
+    opacity: 1;
+  }
+  .slide:hover {
+    cursor: pointer;
+  }
+
+  .projectsavatar {
+    position: fixed;
+    top: 5.6vh;
+    right: 20vw;
+    width: 200px;
+  }
+  /* ---------- projects einde ---------- */
+
+  /* ---------- contact begin ---------- */
+  p.mediaicons {
+    margin-bottom: 0;
+  }
+  .mediaicons img {
+    width: 70px;
+    margin: 0 10px;
+  }
+
+  .contactavatar {
+    position: fixed;
+    right: 6vw;
+    bottom: 10vh;
+    width: 350px;
+    z-index: -1;
+  }
+  /* ---------- contact einde ---------- */
+
+  /* ---------- pop up form ----------- */
+  #formdiv {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: none;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.8);
+    overflow: auto;
+    font-family: 'Victor Mono', monospace;
+  }
+  #close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 20px;
+    height: 20px;
+    border-radius: 15px;
+    font-weight: bolder;
+    font-size: 0.8em;
+    background: rgba(0, 255, 0, 0.7);
+    cursor: pointer;
+    text-align: center;
+    padding: 3px;
+    color: #000;
+  }
+  div#popupContact {
+    position: absolute;
+    left: 38%;
+    top: 15%;
+  }
+  form {
+    width: 400px;
+    padding: 25px;
+    border: 2px solid #fff;
+    border-radius: 25px;
+    background-color: #000;
+    box-shadow: 0px 0px 35px 0px rgba(0, 255, 0, 0.3);
+  }
+  h3 {
+    padding: 20px 35px;
+    margin: -10px -50px;
+    text-align: center;
+    font-size: 1.8em;
+    color: rgba(0, 255, 0, 0.7);
+    font-family: 'Victor Mono', monospace;
+    /* text-shadow: 0px 0px 8px #fff; */
+  }
+  input[type='text'] {
+    width: 100%;
+    padding: 15px 10px;
+    margin-top: 30px;
+    border: 1px solid #fff;
+    outline: none;
+    border-radius: 10px;
+    font-size: 1.1em;
+    background: #000;
+    color: rgba(0, 255, 0, 0.7);
+  }
+  textarea {
+    width: 100%;
+    height: 150px;
+    padding: 15px 10px;
+    resize: none;
+    margin-top: 30px;
+    border: 1px solid #fff;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    font-size: 1.1em;
+    outline: none;
+    background: #000;
+    color: #fff;
+  }
+  ::placeholder {
+    font-family: 'Victor Mono', monospace;
+    font-style: italic;
+    color: rgba(0, 255, 0, 0.3);
+  }
+  #zendBtn {
+    width: 100%;
+    text-align: center;
+    display: block;
+    background-color: rgba(0, 255, 0, 0.7);
+    color: #000;
+    border: 1px solid rgba(0, 255, 0, 0.7);
+    padding: 10px 0;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 10px;
+    font-weight: bold;
+    outline: none;
+  }
+  #form span {
+    color: red;
+    font-weight: 700;
+  }
+  button {
+    width: 150px;
+    height: 45px;
+    border-radius: 15px;
+    outline: none;
+    background-color: #000;
+    border: 3px solid rgba(0, 255, 0, 0.7);
+    box-shadow: 0px 0px 8px 0px rgba(255, 255, 255, 0.8);
+    color: #fff;
+    font-size: 1em;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  /* ---------- pop up form ----------- */
+}
